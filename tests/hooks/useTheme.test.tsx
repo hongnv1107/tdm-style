@@ -1,8 +1,8 @@
 import { renderHook } from '@testing-library/react';
 import { ThemeContext } from 'styled-components';
 
+import { ThemeProvider, useTheme } from '@tdm-design/style';
 import { FC, PropsWithChildren } from 'react';
-import { ThemeProvider, useTheme } from 'tdm-style';
 
 describe('useTheme', () => {
   it('如果没有 Provider，theme 对象时是 tdm Token 默认值', () => {

@@ -1,15 +1,15 @@
 import { FaceSmileHeartsOutlined } from '@tdm-design/icons';
+import { createInstance } from '@tdm-design/style';
 import { Button, ConfigProvider } from '@tdm-design/ui';
 import { render, renderHook } from '@testing-library/react';
 import { PropsWithChildren } from 'react';
-import { createInstance } from 'tdm-style';
 
 interface TestCustomToken {
   x?: string;
   y?: number;
 }
 
-declare module 'tdm-style' {
+declare module '@tdm-design/style' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface CustomToken extends TestCustomToken {}
 }

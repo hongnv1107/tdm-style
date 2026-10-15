@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 
+import { ThemeProvider, useAntdStylish } from '@tdm-design/style';
 import { FC, PropsWithChildren } from 'react';
-import { ThemeProvider, useAntdStylish } from 'tdm-style';
 
 describe('useAntdStylish', () => {
   it('如果没有 Provider，stylish 对象是 tdm Token 的默认值', () => {

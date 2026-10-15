@@ -12,8 +12,8 @@
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "@/*": ["src/*"],
-      "tdm-style": ["src"],
-      "tdm-style/*": ["src/*", "*"]
+      "@tdm-design/style": ["src"],
+      "@tdm-design/style/*": ["src/*", "*"]
     }
   }
 }

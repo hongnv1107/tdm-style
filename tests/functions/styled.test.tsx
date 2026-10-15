@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
+import { Theme as AntdStyleTheme, ThemeProvider } from '@tdm-design/style';
 import { render } from '@testing-library/react';
-import { Theme as AntdStyleTheme, ThemeProvider } from 'tdm-style';
 
-// 为 emotion 的 styled 注入 tdm-style 的主题类型
+// 为 emotion 的 styled 注入 @tdm-design/style 的主题类型
 declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface Theme extends AntdStyleTheme {}

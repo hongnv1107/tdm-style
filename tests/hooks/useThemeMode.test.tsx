@@ -1,5 +1,5 @@
+import { ThemeProvider, useThemeMode } from '@tdm-design/style';
 import { renderHook } from '@testing-library/react';
-import { ThemeProvider, useThemeMode } from 'tdm-style';
 
 describe('useThemeMode', () => {
   it('没有包裹 ThemeProvider 能正常使用', () => {

@@ -1,7 +1,7 @@
+import { createStyles, extractStaticStyle, StyleProvider } from '@tdm-design/style';
 import { Button } from '@tdm-design/ui';
 import { renderToString } from 'react-dom/server';
 import { Flexbox } from 'react-layout-kit';
-import { createStyles, extractStaticStyle, StyleProvider } from 'tdm-style';
 
 describe('extractStaticStyle', () => {
   it('should return an array of StyleItem objects with correct properties', () => {

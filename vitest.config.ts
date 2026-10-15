@@ -8,7 +8,7 @@ export default defineConfig({
     globals: true,
     alias: {
       '@': resolve(__dirname, './src'),
-      'tdm-style': resolve(__dirname, './src'),
+      '@tdm-design/style': resolve(__dirname, './src'),
     },
     coverage: {
       provider: 'v8',

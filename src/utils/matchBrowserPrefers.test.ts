@@ -1,4 +1,4 @@
-import { ThemeAppearance } from 'tdm-style';
+import { ThemeAppearance } from '@tdm-design/style';
 import { vi } from 'vitest';
 import { matchBrowserPrefers } from './matchBrowserPrefers';
 

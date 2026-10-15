@@ -1,5 +1,5 @@
+import { useResponsive } from '@tdm-design/style';
 import { renderHook } from '@testing-library/react';
-import { useResponsive } from 'tdm-style';
 
 describe('useResponsive', () => {
   it('获取响应式结果', () => {

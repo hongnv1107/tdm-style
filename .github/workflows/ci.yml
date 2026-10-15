@@ -67,6 +67,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: tdm-style-package
+          name: tdm-design-style-package
           path: dist/*.tgz
           if-no-files-found: error

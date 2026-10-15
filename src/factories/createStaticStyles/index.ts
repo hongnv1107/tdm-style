@@ -110,12 +110,12 @@ const defaultInstance = createStaticStylesFactory();
  * 与 createStyles 不同，createStaticStyles 直接返回样式对象而非 hook。
  * 样式在模块导入时计算一次，组件内直接使用，无需调用 hook。
  *
- * 静态样式使用与 tdm-style 默认实例相同的 emotion cache，
- * 因此可以使用从 tdm-style 导出的 cx 来正确合并样式。
+ * 静态样式使用与 @tdm-design/style 默认实例相同的 emotion cache，
+ * 因此可以使用从 @tdm-design/style 导出的 cx 来正确合并样式。
  *
  * @example
  * ```tsx
- * import { createStaticStyles, cx } from 'tdm-style';
+ * import { createStaticStyles, cx } from '@tdm-design/style';
  *
  * // 模块级别定义
  * const styles = createStaticStyles(({ css, cssVar }) => ({
@@ -133,7 +133,7 @@ const defaultInstance = createStaticStylesFactory();
  *
  * // 组件内直接使用
  * const Component = () => {
- *   // 使用 tdm-style 导出的 cx 来合并样式
+ *   // 使用 @tdm-design/style 导出的 cx 来合并样式
  *   return <div className={cx(styles.text, styles.secondary)}>Hello</div>;
  * };
  * ```

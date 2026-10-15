@@ -1,10 +1,10 @@
+import { GetCustomToken, ThemeProvider, css, cx, useTheme, useThemeMode } from '@tdm-design/style';
 import { App, MappingAlgorithm, theme } from '@tdm-design/ui';
 import type { MessageInstance } from '@tdm-design/ui/es/message/interface';
 import type { ModalStaticFunctions } from '@tdm-design/ui/es/modal/confirm';
 import type { NotificationInstance } from '@tdm-design/ui/es/notification/interface';
 import { act, render, renderHook } from '@testing-library/react';
 import { FC, PropsWithChildren } from 'react';
-import { GetCustomToken, ThemeProvider, css, cx, useTheme, useThemeMode } from 'tdm-style';
 import { vi } from 'vitest';
 
 interface TestDesignToken {
@@ -19,7 +19,7 @@ interface TestDesignStylish {
   x?: any;
 }
 
-declare module 'tdm-style' {
+declare module '@tdm-design/style' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface CustomToken extends TestDesignToken {}
 

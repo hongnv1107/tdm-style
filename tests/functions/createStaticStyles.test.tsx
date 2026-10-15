@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import {
   createStaticStyles,
   createStaticStylesFactory,
@@ -6,7 +5,8 @@ import {
   cx,
   responsive,
   staticStylesCache,
-} from 'tdm-style';
+} from '@tdm-design/style';
+import { render } from '@testing-library/react';
 
 describe('createStaticStyles', () => {
   describe('基础功能', () => {
@@ -182,7 +182,7 @@ describe('createStaticStyles', () => {
         `,
       }));
 
-      // 使用从 tdm-style 导出的 cx（现在使用相同的 cache）
+      // 使用从 @tdm-design/style 导出的 cx（现在使用相同的 cache）
       const combined = cx(styles.text, styles.secondary);
 
       // 由于现在共享相同的 cache，外部 cx 可以正确合并样式
@@ -243,7 +243,7 @@ describe('createStaticStyles', () => {
       }));
 
       const App = () => {
-        // 使用从 tdm-style 导出的 cx
+        // 使用从 @tdm-design/style 导出的 cx
         return <div className={cx(styles.text, styles.bold)}>Combined Styles</div>;
       };
 

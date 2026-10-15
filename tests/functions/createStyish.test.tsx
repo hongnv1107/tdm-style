@@ -1,5 +1,5 @@
+import { createStylish } from '@tdm-design/style';
 import { render, renderHook } from '@testing-library/react';
-import { createStylish } from 'tdm-style';
 
 describe('createStylish', () => {
   // 创建通用的 stylish 函数

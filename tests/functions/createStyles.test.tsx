@@ -1,8 +1,8 @@
 import { FaceSmileHeartsOutlined } from '@tdm-design/icons';
+import { GetCustomToken, ThemeProvider, createStyles, css } from '@tdm-design/style';
 import { Button, ConfigProvider } from '@tdm-design/ui';
 import { render } from '@testing-library/react';
 import { FC, PropsWithChildren } from 'react';
-import { GetCustomToken, ThemeProvider, createStyles, css } from 'tdm-style';
 
 describe('createStyles', () => {
   describe('styles 对象的使用', () => {

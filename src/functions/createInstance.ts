@@ -55,8 +55,8 @@ export interface CreateOptions<T> {
 }
 
 /**
- * Creates a new instance of tdm-style
- * 创建一个新的 tdm-style 实例
+ * Creates a new instance of @tdm-design/style
+ * 创建一个新的 @tdm-design/style 实例
  */
 export const createInstance = <T = any>(options: CreateOptions<T>) => {
   const internalOptions = {

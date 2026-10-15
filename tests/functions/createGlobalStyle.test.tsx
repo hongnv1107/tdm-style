@@ -1,5 +1,5 @@
+import { createGlobalStyle, ThemeProvider } from '@tdm-design/style';
 import { render } from '@testing-library/react';
-import { createGlobalStyle, ThemeProvider } from 'tdm-style';
 
 describe('createGlobalStyle', () => {
   it('全局样式', async () => {
