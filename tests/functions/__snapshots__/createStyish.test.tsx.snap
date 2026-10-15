@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createStylish > 渲染使用 1`] = `
+.emotion-0 {
+  cursor: pointer;
+  -webkit-transition: 150ms background-color ease-in-out;
+  transition: 150ms background-color ease-in-out;
+  border-radius: 4px;
+  background: rgba(41,42,46,0.02);
+}
+
+.emotion-0:hover {
+  background: rgba(41,42,46,0.02);
+}
+
+.emotion-0:hover {
+  background: #0515240F;
+}
+
+<div
+  class="emotion-0"
+>
+  bglayout
+</div>
+`;
+
+exports[`createStylish > 默认快照 1`] = `
+{
+  "containerBgHover": "tcss-1yc46jy",
+  "containerBgL2": "tcss-12deeka",
+  "defaultButton": "tcss-1130574",
+}
+`;

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useAntdStylish > 包裹 Provider 后如果自定义主题变量 1`] = `
+{
+  "buttonDefaultHover": "background-color:#ffffff;border:1px solid #0B120E24;cursor:pointer;:hover{color:#7183eb;border-color:#7183eb;}:active{color:#323db8;border-color:#323db8;}",
+}
+`;
+
+exports[`useAntdStylish > 如果没有 Provider，stylish 对象是 tdm Token 的默认值 1`] = `
+{
+  "buttonDefaultHover": "background-color:#ffffff;border:1px solid #0B120E24;cursor:pointer;:hover{color:#3f8be8;border-color:#3f8be8;}:active{color:#0b4cb5;border-color:#0b4cb5;}",
+}
+`;
+
+exports[`useAntdStylish > 嵌套 Provider 后能拿到准确的主题值 1`] = `"background-color:#1F1F21;border:1px solid #E3E4F21F;cursor:pointer;:hover{color:#3b7fd3;border-color:#3b7fd3;}:active{color:#174b95;border-color:#174b95;}"`;

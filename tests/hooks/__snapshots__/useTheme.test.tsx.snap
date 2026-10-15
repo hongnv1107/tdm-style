@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useTheme > 包裹 Provider 后如果自定义主题变量 1`] = `
+{
+  "buttonDefaultHover": "background-color:#ffffff;border:1px solid #0B120E24;cursor:pointer;:hover{color:#7183eb;border-color:#7183eb;}:active{color:#323db8;border-color:#323db8;}",
+}
+`;
+
+exports[`useTheme > 如果没有 Provider，theme 对象时是 tdm Token 默认值 1`] = `
+{
+  "buttonDefaultHover": "background-color:#ffffff;border:1px solid #0B120E24;cursor:pointer;:hover{color:#3f8be8;border-color:#3f8be8;}:active{color:#0b4cb5;border-color:#0b4cb5;}",
+}
+`;

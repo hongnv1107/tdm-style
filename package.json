@@ -1,0 +1,90 @@
+{
+  "name": "tdm-style",
+  "version": "0.1.0-rc.0",
+  "description": "css-in-js solution for application combine with @tdm-design/ui token system and emotion",
+  "keywords": [
+    "tdm-design",
+    "css-in-js",
+    "cssinjs",
+    "design token",
+    "token",
+    "token-system",
+    "emotion"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hongnv1107/tdm-style.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:watch": "father dev",
+    "ci": "npm run lint && npm run type-check && npm run test:run",
+    "clean": "rm -rf es lib dist coverage .eslintcache",
+    "doctor": "father doctor",
+    "lint": "eslint \"{src,tests}/**/*.{js,jsx,ts,tsx}\"",
+    "prepublishOnly": "father doctor && npm run build",
+    "prettier": "prettier -c --write \"**/**\"",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:run": "vitest run",
+    "test:update": "vitest -u",
+    "type-check": "tsc -p tsconfig-check.json"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^2.1.0",
+    "@babel/runtime": "^7.24.1",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/serialize": "^1.1.3",
+    "@emotion/utils": "^1.2.1",
+    "use-merge-value": "^1.2.0"
+  },
+  "devDependencies": {
+    "@emotion/jest": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@tdm-design/icons": "^1.0.0-beta.0",
+    "@tdm-design/ui": "^0.0.32-rc.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@types/react": "^18.2.69",
+    "@types/react-dom": "^18.2.22",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@umijs/lint": "^4.1.5",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^8.57.0",
+    "father": "^4.4.0",
+    "happy-dom": "^18.0.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-layout-kit": "^1.9.2",
+    "styled-components": "^6.1.8",
+    "typescript": "^5.4.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "@tdm-design/ui": ">=0.0.32-rc.0",
+    "react": ">=18"
+  },
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
