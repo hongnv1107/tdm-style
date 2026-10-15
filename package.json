@@ -1,6 +1,6 @@
 {
   "name": "@tdm-design/style",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0-rc.1",
   "description": "css-in-js solution for application combine with @tdm-design/ui token system and emotion",
   "keywords": [
     "tdm-design",

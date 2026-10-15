@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+  # Required for npm Trusted Publishing (OIDC)
+  id-token: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    # Must match "Environment name" in the npm Trusted Publisher settings
+    environment: npm
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      # Trusted Publishing needs npm >= 11.5.1
+      - run: npm install -g npm@latest
+
+      - name: Resolve version and dist-tag
+        id: meta
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          if [ "v$VERSION" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $VERSION"
+            exit 1
+          fi
+          # 0.1.0-rc.1 -> rc, 1.0.0-beta.0 -> beta, 1.0.0 -> latest
+          if [[ "$VERSION" == *-* ]]; then
+            PRE="${VERSION#*-}"
+            DIST_TAG="${PRE%%.*}"
+          else
+            DIST_TAG=latest
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "dist-tag=$DIST_TAG" >> "$GITHUB_OUTPUT"
+          echo "Publishing $VERSION with dist-tag $DIST_TAG"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run test:run
+
+      # prepublishOnly runs `father doctor` and the build
+      - run: npm publish --tag ${{ steps.meta.outputs.dist-tag }}
